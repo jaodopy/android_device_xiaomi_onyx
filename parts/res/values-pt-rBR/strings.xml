@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020 The LineageOS Project
+
+     Licenciado sob a Licença Apache, Versão 2.0 (a "Licença");
+     você não pode usar este arquivo exceto em conformidade com a Licença.
+     Você pode obter uma cópia da Licença em
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     A menos que exigido por lei aplicável ou acordado por escrito, software
+     distribuído sob a Licença é distribuído "COMO ESTÁ",
+     SEM GARANTIAS OU CONDIÇÕES DE QUALQUER TIPO, expressas ou implícitas.
+     Consulte a Licença para o idioma específico que rege as permissões e
+     limitações sob a Licença.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Configurações Xiaomi -->
+    <string name="app_title">Configurações Xiaomi</string>
+    <string name="tile_add">Adicionar atalho</string>
+    <string name="tile_added">Atalho adicionado</string>
+    <string name="tile_not_added">Atalho não adicionado</string>
+    <string name="tile_already_added">Atalho já adicionado</string>
+    <string name="tile_on">Ligado</string>
+    <string name="tile_off">Desligado</string>
+ 
+    <!-- Perfis térmicos -->
+    <string name="thermal_title">Perfis térmicos</string>
+    <string name="thermal_summary">Ajuste perfis térmicos por aplicativo para um desempenho ideal</string>
+    <string name="thermal_default">Sem otimização</string>
+    <string name="thermal_benchmark">Desempenho</string>
+    <string name="thermal_browser">Navegador</string>
+    <string name="thermal_camera">Câmera</string>
+    <string name="thermal_dialer">Discador</string>
+    <string name="thermal_gaming">Jogos</string>
+    <string name="thermal_navigation">Navegação</string>
+    <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_video">Vídeos</string>
+
+    <!-- Textos do Atalho Térmico -->
+    <string name="thermal_tile_label">Modo Térmico</string>
+    <string name="thermal_mode_default">Modo Padrão</string>
+    <string name="thermal_mode_performance">Modo Desempenho</string>
+    <string name="thermal_mode_battery_saver">Modo Economia</string>
+    <string name="thermal_mode_gaming">Modo Jogos</string>
+
+    <!-- Saturação -->
+    <string name="saturation_title">Saturação da Tela</string>
+    <string name="saturation_summary">Controle o nível de saturação da tela</string>
+    <string name="saturation_footer_summary">Alterar o modo de cor nas configurações de tela substituirá o nível de saturação, exigindo que seja reaplicado.</string>
+
+    <!-- Pré-visualização de imagem -->
+    <string name="image_preview_content_description">Pré-visualização</string>
+    <string name="image_preview_next_page_content_description">Próximo</string>
+    <string name="image_preview_previous_page_content_description">Anterior</string>
+
+    <!-- Barra de progresso personalizada -->
+    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">padrão</string>
+    <string name="custom_seekbar_default_value_to_set">Valor padrão: <xliff:g id="v">%s</xliff:g>\nToque longo para definir</string>
+    <string name="custom_seekbar_default_value_is_set">Valor padrão definido</string>
+    
+    <!-- HBM Automático -->
+    <string name="auto_hbm_title">Modo de Alto Brilho Automático (HBM)</string>
+    <string name="auto_hbm_main_switch_title">Usar HBM automático</string>
+    <string name="tile_auto_hbm">HBM Auto</string>
+    <string name="tile_hbm_on">Ativado</string>
+    <string name="tile_hbm_off">Desativado</string>
+    <string name="tile_hbm">HBM</string>
+    <string name="tile_hbm_unavailable">HBM Indisponível</string>
+    <string name="tile_auto_hbm_or_brightness_enabled">HBM Auto ou Brilho Automático ativado</string>
+    <string name="hbm_mode_title">Modo de Alto Brilho</string>
+    <string name="hbm_mode_notification">Modo de Alto Brilho ativado. Uso prolongado pode danificar sua tela.</string>
+    <string name="auto_hbm_summary">Ativar automaticamente o modo de alto brilho baseado na intensidade da luz solar (lux)</string>
+    <string name="auto_hbm_threshold_title">Limite de luz</string>
+    <string name="auto_hbm_threshold_summary">Defina o limite de intensidade luminosa em unidades lux para ativar o HBM</string>
+    <string name="auto_hbm_enable_time_title">Tempo de ativação</string>
+    <string name="auto_hbm_enable_time_summary">Duração em segundos que o limite de luz deve ser mantido para ativar o HBM</string>
+    <string name="auto_hbm_disable_time_title">Tempo de desativação</string>
+    <string name="auto_hbm_disable_time_summary">Duração em segundos para desativar o HBM quando a luz ficar abaixo do limite definido</string>
+
+    <!-- General GameBar Strings -->
+    <!-- Used for general app descriptions or UI elements -->
+    <string name="game_bar_title">Barra de Jogos</string>
+    <string name="game_bar_summary">Ativar sobreposição do sistema (FPS, Temp, etc.)</string>
+    <string name="game_bar_tile_label">Barra de Jogos</string>
+    <string name="game_bar_tile_description">Alternar sobreposição do jogo</string>
+
+    <!-- Overlay Permission Messages -->
+    <string name="overlay_permission_required">Permissão de sobreposição necessária</string>
+    <string name="overlay_permission_granted">Permissão de sobreposição concedida</string>
+    <string name="overlay_permission_denied">Permissão de sobreposição negada</string>
+
+    <!-- Preference: Main Switch -->
+    <string name="game_bar_enable_title">Ativar Barra de Jogos</string>
+
+    <!-- Preference Category: Overlay Features -->
+    <string name="overlay_features_category">Recursos da sobreposição</string>
+    <string name="game_bar_fps_enable_title">Sobreposição de FPS</string>
+    <string name="game_bar_fps_enable_summary">Mostrar FPS atual na tela</string>
+    <string name="game_bar_temp_enable_title">Temperatura do dispositivo</string>
+    <string name="game_bar_temp_enable_summary">Mostrar temperatura da bateria</string>
+    <string name="game_bar_cpu_usage_enable_title">Uso da CPU</string>
+    <string name="game_bar_cpu_usage_enable_summary">Mostrar porcentagem atual de uso da CPU</string>
+    <string name="game_bar_cpu_clock_enable_title">Frequências da CPU</string>
+    <string name="game_bar_cpu_clock_enable_summary">Mostrar frequências atuais da CPU para cada núcleo</string>
+    <string name="game_bar_cpu_temp_enable_title">Temperatura da CPU</string>
+    <string name="game_bar_cpu_temp_enable_summary">Mostrar temperatura da CPU (thermal_zone0)</string>
+    <string name="game_bar_ram_enable_title">Uso de RAM</string>
+    <string name="game_bar_ram_enable_summary">Mostrar uso atual de RAM em MB</string>
+    <string name="game_bar_gpu_usage_enable_title">Uso da GPU</string>
+    <string name="game_bar_gpu_usage_enable_summary">Mostrar porcentagem de uso da GPU</string>
+    <string name="game_bar_gpu_clock_enable_title">Frequência da GPU</string>
+    <string name="game_bar_gpu_clock_enable_summary">Mostrar frequência atual da GPU</string>
+    <string name="game_bar_gpu_temp_enable_title">Temperatura da GPU</string>
+    <string name="game_bar_gpu_temp_enable_summary">Mostrar temperatura atual da GPU</string>
+
+    <!-- Preference Category: FPS Measurement Method -->
+    <string name="fps_measurement_method_category">Método de medição de FPS</string>
+    <string name="game_bar_fps_method_title">Selecionar método de FPS</string>
+    <string name="game_bar_fps_method_summary">Escolha entre o método Nova API (padrão) e Sysfs legado</string>
+
+    <!-- Preference Category: Customization -->
+    <string name="customization_category">Personalização</string>
+    <string name="game_bar_text_size_title">Tamanho do texto</string>
+    <string name="game_bar_text_size_summary">Ajustar o tamanho do texto da sobreposição</string>
+    <string name="game_bar_background_alpha_title">Transparência do fundo</string>
+    <string name="game_bar_background_alpha_summary">Ajustar a transparência do fundo</string>
+    <string name="game_bar_corner_radius_title">Raio dos cantos da sobreposição</string>
+    <string name="game_bar_corner_radius_summary">Ajustar o quanto os cantos da sobreposição serão arredondados</string>
+    <string name="game_bar_padding_title">Espaçamento da sobreposição</string>
+    <string name="game_bar_padding_summary">Ajustar o espaço ao redor das estatísticas</string>
+    <string name="game_bar_item_spacing_title">Espaçamento dos itens</string>
+    <string name="game_bar_item_spacing_summary">Ajustar o espaçamento entre as linhas da sobreposição</string>
+    <string name="game_bar_update_interval_title">Intervalo de atualização</string>
+    <string name="game_bar_update_interval_summary">Definir com que frequência os valores da sobreposição serão atualizados</string>
+    <string name="game_bar_title_color_title">Cor do título da estatística</string>
+    <string name="game_bar_title_color_summary">Cor para textos como \'FPS\', \'Temp\', \'CPU\', etc.</string>
+    <string name="game_bar_value_color_title">Cor do valor da estatística</string>
+    <string name="game_bar_value_color_summary">Cor para valores numéricos (ex.: \'29\', \'32.0°C\')</string>
+    <string name="game_bar_position_title">Posição da sobreposição</string>
+    <string name="game_bar_position_summary">Selecionar a posição da sobreposição na tela</string>
+    <string name="game_bar_format_title">Formato da sobreposição</string>
+    <string name="game_bar_format_summary">Escolher entre exibição completa ou mínima</string>
+    
+    <!-- Preference Category: Split Config -->
+    <string name="split_config_category">Configuração dividida</string>
+    <string name="game_bar_split_mode_title">Modo dividido</string>
+    <string name="game_bar_split_mode_summary">Escolher disposição lado a lado ou empilhada</string>
+
+    <!-- Preference Category: Overlay Gesture Controls -->
+    <string name="overlay_gesture_controls_category">Controles por gestos da sobreposição</string>
+    <string name="game_bar_single_tap_toggle_title">Ativar toque único para alternar</string>
+    <string name="game_bar_single_tap_toggle_summary">Toque uma vez para alternar entre os formatos completo e mínimo</string>
+    <string name="game_bar_doubletap_capture_title">Ativar toque duplo para capturar</string>
+    <string name="game_bar_doubletap_capture_summary">Toque duplo na sobreposição para iniciar/parar a captura de logs</string>
+    <string name="game_bar_longpress_enable_title">Ativar pressionar e segurar</string>
+    <string name="game_bar_longpress_enable_summary">Pressionar e segurar a sobreposição para acessar as configurações da Barra de Jogos</string>
+    <string name="game_bar_longpress_timeout_title">Duração do pressionar e segurar</string>
+    <string name="game_bar_longpress_timeout_summary">Definir o tempo necessário para pressionar e segurar a sobreposição</string>
+
+    <!-- Preference Category: Capture Logs -->
+    <string name="capture_logs_category">Capturar logs</string>
+    <string name="game_bar_capture_start_title">Iniciar registro</string>
+    <string name="game_bar_capture_start_summary">Começar a capturar FPS e dados de desempenho em tempo real</string>
+    <string name="game_bar_capture_stop_title">Parar registro</string>
+    <string name="game_bar_capture_stop_summary">Parar a captura de FPS e dados de desempenho em tempo real</string>
+    <string name="game_bar_capture_export_title">Exportar dados de log da Barra de Jogos</string>
+    <string name="game_bar_capture_export_summary">Salvar os dados capturados de FPS e desempenho como um arquivo CSV</string>
+
+    <!-- Preference Category: Auto Enable GameBar -->
+    <string name="auto_enable_gamebar_category">Ativar Barra de Jogos automaticamente</string>
+    <string name="game_bar_auto_enable_title">Ativar Barra de Jogos automaticamente para apps selecionados</string>
+    <string name="game_bar_auto_enable_summary">Se ativado, os apps selecionados habilitarão a Barra de Jogos automaticamente mesmo que o interruptor principal esteja desligado</string>
+    <string name="game_bar_app_selector_title">Selecionar apps</string>
+    <string name="game_bar_app_selector_summary">Adicionar apps que devem ativar automaticamente a Barra de Jogos</string>
+    <string name="game_bar_app_remover_title">Remover apps selecionados</string>
+    <string name="game_bar_app_remover_summary">Remover apps da lista de ativação automática</string>
+
+    <!-- Activity Titles -->
+    <string name="game_bar_app_selector_activity_title">Selecionar apps para a Barra de Jogos</string>
+    <string name="game_bar_app_remover_activity_title">Remover apps de ativação automática</string>
+
+    <!-- Toast Messages -->
+    <!-- Used for gesture-based capture actions -->
+    <string name="capture_started">Captura iniciada</string>
+    <string name="capture_stopped">Captura finalizada</string>
+    <!-- Used for preference-based capture actions -->
+    <string name="capture_start_toast">Registro de dados iniciado</string>
+    <string name="capture_stop_toast">Registro de dados finalizado</string>
+    <string name="capture_export_toast">Dados exportados para arquivo</string>
+    <!-- Used for overlay format toggle -->
+    <string name="overlay_format_prefix">Formato da sobreposição: %s</string>
+    <!-- Used for app selection/removal -->
+    <string name="app_added_toast">%s adicionado.</string>
+    <string name="app_removed_toast">%s removido.</string>
+
+    <!-- Array: FPS Measurement Method -->
+    <string-array name="game_bar_fps_method_entries">
+        <item>Nova API (Padrão)</item>
+        <item>Sysfs Legado</item>
+    </string-array>
+    <string-array name="game_bar_fps_method_values">
+        <item>new</item>
+        <item>legacy</item>
+    </string-array>
+
+    <!-- Array: Update Interval -->
+    <string-array name="fps_overlay_update_interval_entries">
+        <item>A cada 500ms</item>
+        <item>A cada segundo</item>
+        <item>A cada 2 segundos</item>
+        <item>A cada 5 segundos</item>
+    </string-array>
+    <string-array name="fps_overlay_update_interval_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>5000</item>
+    </string-array>
+
+    <!-- Array: Overlay Position -->
+    <string-array name="fps_overlay_position_entries">
+        <item>Superior Esquerdo</item>
+        <item>Superior Central</item>
+        <item>Superior Direito</item>
+        <item>Inferior Esquerdo</item>
+        <item>Inferior Central</item>
+        <item>Inferior Direito</item>
+        <item>Personalizado Arrastável</item>
+    </string-array>
+    <string-array name="fps_overlay_position_values">
+        <item>top_left</item>
+        <item>top_center</item>
+        <item>top_right</item>
+        <item>bottom_left</item>
+        <item>bottom_center</item>
+        <item>bottom_right</item>
+        <item>draggable</item>
+    </string-array>
+
+    <!-- Array: Overlay Color -->
+    <string-array name="fps_overlay_color_entries">
+        <item>Branco</item>
+        <item>Carmesim</item>
+        <item>Verde Frutado</item>
+        <item>Azul Real</item>
+        <item>Âmbar</item>
+        <item>Verde-azulado</item>
+        <item>Violeta Elétrico</item>
+        <item>Magenta</item>
+    </string-array>
+
+    <string-array name="fps_overlay_color_values">
+        <item>#FFFFFF</item>
+        <item>#DC143C</item>
+        <item>#4CAF50</item>
+        <item>#4169E1</item>
+        <item>#FFBF00</item>
+        <item>#008080</item>
+        <item>#8A2BE2</item>
+        <item>#FF1493</item>
+    </string-array>
+
+    <!-- Array: Overlay Format -->
+    <string-array name="game_bar_format_entries">
+        <item>Completo</item>
+        <item>Minimalista</item>
+    </string-array>
+    <string-array name="game_bar_format_values">
+        <item>full</item>
+        <item>minimal</item>
+    </string-array>
+
+    <!-- Array: Split Mode -->
+    <string-array name="game_bar_split_mode_entries">
+        <item>Lado a Lado</item>
+        <item>Empilhado</item>
+    </string-array>
+    <string-array name="game_bar_split_mode_values">
+        <item>side_by_side</item>
+        <item>stacked</item>
+    </string-array>
+
+    <!-- Array: Long Press Timeout -->
+    <string-array name="game_bar_longpress_entries">
+        <item>0,5 segundo</item>
+        <item>1 segundo</item>
+        <item>3 segundos</item>
+        <item>5 segundos</item>
+    </string-array>
+    <string-array name="game_bar_longpress_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>3000</item>
+        <item>5000</item>
+    </string-array>
+</resources>
