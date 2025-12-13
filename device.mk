@@ -449,6 +449,15 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.passpoint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.passpoint.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.aware.xml
+ 
+# Enable Hint manager for SurfaceFlinger and HWUI
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.hwui.use_hint_manager=true \
+    debug.hwui.target_cpu_time_percent=30
+
+# DSP
+PRODUCT_PACKAGES += \
+    DSPVolumeSynchronizer
 
 # Vendor
 $(call inherit-product, vendor/xiaomi/onyx/onyx-vendor.mk)
