@@ -23,7 +23,7 @@ namespace_imports = [
     'hardware/lineage/compat',
     'hardware/qcom-caf/wlan',
     'hardware/qcom-caf/common/libqti-perfd-client',
-    'hardware/lineage/interfaces/power-libperfmgr',
+    'hardware/euclid/interfaces/power-libperfmgr',
     'hardware/google/interfaces',
     'hardware/google/pixel',
     'hardware/xiaomi',
