@@ -302,12 +302,17 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/power/config/sun/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
-$(call soong_config_set,qtipower,mode_ext_lib,//$(LOCAL_PATH):libpowermode-ext-onyx)
+# Power - libperfmgr extension
+$(call soong_config_set,power_libperfmgr,mode_extension_lib,//device/xiaomi/onyx/power:libperfmgr-ext-onyx)
+
+PRODUCT_PACKAGES += \
+    libperfmgr-ext-onyx
 
 # Properties
 PRODUCT_COPY_FILES += \
@@ -315,10 +320,81 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/properties/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_GL.prop \
     $(LOCAL_PATH)/properties/odm_IN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_IN.prop
 
+# SKU
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/props/odm_CN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_CN.prop \
+    $(LOCAL_PATH)/props/odm_GL.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_GL.prop \
+    $(LOCAL_PATH)/props/odm_IN.prop:$(TARGET_COPY_OUT_ODM)/etc/odm_IN.prop
+
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(LOCAL_PATH) \
+    hardware/xiaomi \
+    hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/google/interfaces \
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    vendor/qcom/opensource/usb/etc
+
 # QSPA
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
     qspa_vendor.rc
+
+# Spammy log tags - silence on user/userdebug builds
+SPAMMY_LOG_TAGS := \
+    Diag_Lib \
+    artd \
+    ArtService \
+    MiClstc \
+    MiEvent \
+    MiStcImpl \
+    SDM \
+    SRE \
+    libsensor-boledalgo \
+    libsensor-parseRGB \
+    libsensor-qshcalapi \
+    sensors \
+    sensors-hal \
+    vendor.qti.hardware.display.composer-service \
+    vendor.xiaomi.sensor.citsensorservice-service.aidl \
+    vendor.xiaomi.sensor.citsensorservice.aidl \
+    vendor.qti.camera.provider-service_64 \
+    vendor.hardware.vibratorfeature \
+    CamX \
+    CAM_Thumbnail \
+    CAM_CaptureRequestBuilder \
+    CameraLatencyHistogram \
+    ChiX \
+    CHIIQUTILS \
+    CHISEG \
+    CHIUSECASE \
+    DEBUG-portrait_repair \
+    MAW \
+    MiAlgoEngine \
+    mialgo_rfs_api \
+    MiCamHAL \
+    MISV2 \
+    MISV3 \
+    MISV4 \
+    MIGME \
+    MISHisAdapter \
+    android.hardware.power-service.lineage-libperfmgr \
+    libperfmgr \
+    android.hardware.audio.service \
+    android.hardware.light-V2-ndk.vendor \
+    vibratorfeature-wrapper \
+    android.hardware.vibrator-V1-ndk_platform.vendor \
+    libqti-perfd-client \
+    BATTERY_CHG \
+    BackgroundInstallControlService \
+    BackupTransportManager \
+    ActivityManager
+
+ifneq ($(TARGET_BUILD_VARIANT),eng)
+PRODUCT_VENDOR_PROPERTIES += \
+    $(foreach tag,$(SPAMMY_LOG_TAGS),persist.log.tag.$(tag)=S)
+endif
 
 # QTI fwk-detect
 PRODUCT_PACKAGES += \
