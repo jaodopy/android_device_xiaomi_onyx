@@ -300,7 +300,6 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
-        "10",
         "50"
       ],
       "DefaultIndex": 0,
@@ -310,13 +309,6 @@
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
-        "264000000",
-        "362000000",
-        "510000000",
-        "644000000",
-        "688000000",
-        "763000000",
-        "873000000",
         "937000000"
       ],
       "DefaultIndex": 0,
@@ -577,25 +569,13 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 150,
-      "Value": "1401600"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterRateLimit",
-      "Duration": 150,
-      "Value": "500"
+      "Value": "1632000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
-      "Duration": 2000,
+      "Duration": 1000,
       "Value": "30"
-    },
-    {
-      "PowerHint": "INTERACTION",
-      "Node": "UclampTALatency",
-      "Duration": 150,
-      "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
@@ -667,7 +647,7 @@
       "PowerHint": "LAUNCH",
       "Node": "UclampFGMin",
       "Duration": 1000,
-      "Value": "10"
+      "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
@@ -697,7 +677,7 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "688000000"
+      "Value": "264000000"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
