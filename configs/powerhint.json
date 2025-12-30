@@ -280,7 +280,8 @@
       "Values": [
         "0",
         "30",
-        "50"
+        "50",
+        "80"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -300,6 +301,8 @@
       "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
       "Values": [
         "0",
+        "10",
+        "20",
         "50"
       ],
       "DefaultIndex": 0,
@@ -318,7 +321,10 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "264000000"
+        "264000000",
+        "443000000",
+        "550000000",
+        "676000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -486,6 +492,15 @@
       "Type": "Property"
     },
     {
+      "Name": "PowerHALGameState",
+      "Path": "vendor.powerhal.game",
+      "Values": [
+        "",
+        "GAME_MODE"
+      ],
+      "Type": "Property"
+    },
+    {
       "Name": "ThermalMessage",
       "Path": "/sys/devices/virtual/thermal/thermal_message/sconfig",
       "Values": [
@@ -569,13 +584,19 @@
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
       "Duration": 150,
-      "Value": "1632000"
+      "Value": "1286400"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
-      "Duration": 1000,
+      "Duration": 2000,
       "Value": "30"
+    },
+    {
+      "PowerHint": "INTERACTION",
+      "Node": "UclampTALatency",
+      "Duration": 250,
+      "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
@@ -616,56 +637,56 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1401600"
+      "Duration": 3000,
+      "Value": "1632000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1401600"
+      "Duration": 3000,
+      "Value": "1632000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1286400"
+      "Duration": 3000,
+      "Value": "1401600"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUPrimeClusterMinFreq",
-      "Duration": 1000,
-      "Value": "1478400"
+      "Duration": 3000,
+      "Value": "1785600"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampTAMin",
-      "Duration": 1000,
-      "Value": "30"
+      "Duration": 3000,
+      "Value": "50"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "UclampFGMin",
-      "Duration": 1000,
-      "Value": "0"
+      "Duration": 3000,
+      "Value": "20"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWMinFreq",
-      "Duration": 1000,
-      "Value": "2092800"
+      "Duration": 3000,
+      "Value": "2736000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "LLCCBWMinFreq",
-      "Duration": 1000,
-      "Value": "806000"
+      "Duration": 3000,
+      "Value": "933000"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "L3MinFreq",
-      "Duration": 1000,
-      "Value": "1209600"
+      "Duration": 3000,
+      "Value": "1344000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -677,7 +698,25 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "264000000"
+      "Value": "443000000"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUForceRailOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUForceClkOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "EXPENSIVE_RENDERING",
+      "Node": "GPUIdleTimer",
+      "Duration": 0,
+      "Value": "10000"
     },
     {
       "PowerHint": "FIXED_PERFORMANCE",
@@ -687,9 +726,159 @@
     },
     {
       "PowerHint": "GAME",
+      "Node": "PowerHALGameState",
+      "Duration": 0,
+      "Value": "GAME_MODE"
+    },
+    {
+      "PowerHint": "GAME",
       "Node": "ThermalMessage",
       "Duration": 0,
       "Value": "19"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPULittleClusterMinFreq",
+      "Duration": 0,
+      "Value": "1075200"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigClusterMinFreq",
+      "Duration": 0,
+      "Value": "1190400"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigPlusClusterMinFreq",
+      "Duration": 0,
+      "Value": "1286400"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUPrimeClusterMinFreq",
+      "Duration": 0,
+      "Value": "1363200"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPULittleClusterRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigClusterRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBigPlusClusterRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUPrimeClusterRateLimit",
+      "Duration": 0,
+      "Value": "500"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "80"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "UclampTALatency",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "UclampFGMin",
+      "Duration": 0,
+      "Value": "20"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUMinFreq",
+      "Duration": 0,
+      "Value": "550000000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUForceRailOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUForceClkOn",
+      "Duration": 0,
+      "Value": "1"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "GPUIdleTimer",
+      "Duration": 0,
+      "Value": "10000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBWMinFreq",
+      "Duration": 0,
+      "Value": "2736000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBWHistMemory",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "CPUBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "LLCCBWMinFreq",
+      "Duration": 0,
+      "Value": "933000"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "LLCCBWHystTriggerCount",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "LLCCBWHistMemory",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "LLCCBWHystLength",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "GAME",
+      "Node": "L3MinFreq",
+      "Duration": 0,
+      "Value": "1344000"
     },
     {
       "PowerHint": "Flipendo",
